@@ -25,6 +25,11 @@
   body {
     text-align: center;
     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
     height: 100%;
     background-color: #2C4159;
     font-family: "Open Sans", sans-serif;
@@ -43,16 +48,7 @@
     transform-style: preserve-3d;
     perspective: 1000px;
   }
-  /* .reflection-container:before {
-    content: "Hover me";
-    color: #0a0000;
-    position: absolute;
-    z-index: 5;
-    bottom: -40px;
-    font-size: 6vh;
-    font-weight:800;
-    transform: translateY(50%);
-  } */
+ 
   .reflection-container .reflection-content {
     height: 80vh;
     width: 60vh;
@@ -65,15 +61,7 @@
     transition: 100ms linear transform;
     overflow: hidden;
   }
-  .reflection-container .reflection-content:before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    left: -50%;
-    top: -50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
-  }
+ 
   .reflection-container .reflection-grid-cell {
     position: absolute;
     z-index: 1;
@@ -1091,9 +1079,13 @@
     
   </head>
   
-  <body translate="no">
+  <body>
+    <header>
+      <h1>About Me</h1>
+      <h2>I like my family and stuff</h2>
+    </header>
     <div class="cards">
-    <div class="reflection-container">
+      <div class="reflection-container">
     <a class="reflection-grid-cell reflection-grid-cell-1" href="#"></a>
     <a class="reflection-grid-cell reflection-grid-cell-2" href="#"></a>
     <a class="reflection-grid-cell reflection-grid-cell-3" href="#"></a>
@@ -1195,10 +1187,20 @@
     <a class="reflection-grid-cell reflection-grid-cell-99" href="#"></a>
     <a class="reflection-grid-cell reflection-grid-cell-100" href="#"></a>
     <div class="reflection-content"></div>
-  </div>
-</div>
-    
-    
+      </div>
+      <div class="card">
+		    <div class="photo" id="img1"></div>
+		      <h2>Growing</h2>
+		      <p>Skills</p>
+		    <div class="chart">
+            <div class="bar bar1"><span>GeoPython</span></div>
+            <div class="bar bar2"><span>Data Science</span></div>
+            <div class="bar bar3"><span>Development</span></div>
+            <div class="bar bar4"><span>Mapping</span></div>
+            <div class="bar bar5"><span>Web Design</span></div>
+        </div>
+      </div>
+    </div>
     
   
   
